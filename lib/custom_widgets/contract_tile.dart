@@ -412,10 +412,10 @@ Threads      : 3        (Winner: 0)''',
 
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002",_contractStatusShape) del(_hasEndDate("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002","2024_07_07 10:38:07.617000+00:00"))
+actualTarget("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002",_endDateShape) del(_hasEndDate("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002","2024_07_07 10:38:07.617000+00:00"))
 Optimization: 0 1
 Answer: 2
-actualTarget("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002",_contractStatusShape) del(_hasEndDate("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002","2023_07_07 10:38:07.617000+00:00"))
+actualTarget("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002",_endDateShape) del(_hasEndDate("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002","2023_07_07 10:38:07.617000+00:00"))
 Optimization: 0 1
 OPTIMUM FOUND
 
@@ -430,40 +430,40 @@ Threads      : 3        (Winner: 1)''',
 
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
 Optimization: 0 2 0
 Answer: 2
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
 Optimization: 0 2 0
 Answer: 3
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 4
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
 Optimization: 0 2 0
 Answer: 5
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
 Optimization: 0 2 0
 Answer: 6
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 7
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 8
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 9
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 10
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 11
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 12
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 OPTIMUM FOUND
 
@@ -524,10 +524,10 @@ CPU Time     : 0.011s
 Threads      : 3        (Winner: 2)''',
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_273d1d90-e6df-11ee-9cdd-0242ac1c0002",_contractStatusShape) del(fibo_fnd_agr_ctr_hasEffectiveDate("_contb2c_273d1d90-e6df-11ee-9cdd-0242ac1c0002","2022_09_07 10:38:07.617000+00:00"))
+actualTarget("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002",_effectiveDateShape) del(fibo_fnd_agr_ctr_hasEffectiveDate("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002","2022_09_07 10:38:07.617000+00:00"))
 Optimization: 0 1
 Answer: 2
-actualTarget("_contb2c_273d1d90-e6df-11ee-9cdd-0242ac1c0002",_contractStatusShape) del(fibo_fnd_agr_ctr_hasEffectiveDate("_contb2c_273d1d90-e6df-11ee-9cdd-0242ac1c0002","2023_09_07 10:38:07.617000+00:00"))
+actualTarget("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002",_effectiveDateShape) del(fibo_fnd_agr_ctr_hasEffectiveDate("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002","2023_09_07 10:38:07.617000+00:00"))
 Optimization: 0 1
 OPTIMUM FOUND
 
@@ -615,19 +615,36 @@ Calls        : 1
 Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.005s
 Threads      : 3        (Winner: 1)''',
+// '''Solving...
+// Answer: 1
+// actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractContractorShape) add(_hasContractors("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","5323"))
+// Optimization: 0 1
+// OPTIMUM FOUND
+
+// Models       : 2
+//   Optimum    : yes
+// Optimization : 0 1
+// Calls        : 1
+// Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+// CPU Time     : 0.006s
+// Threads      : 3        (Winner: 2)''',
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_contractContractorShape) add(_hasContractors("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","5323"))
+actualTarget("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002",_removeContractCategory) del(_hasContractCategory("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002","_categoryBusinessToBusiness"))
+Optimization: 0 1
+Answer: 2
+actualTarget("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002",_removeContractCategory) del(_hasContractCategory("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002","_categoryBusinessToConsumer"))
 Optimization: 0 1
 OPTIMUM FOUND
 
-Models       : 2
+Models       : 3
   Optimum    : yes
+  Optimal    : 2
 Optimization : 0 1
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
-Threads      : 3        (Winner: 2)'''
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
+Threads      : 3        (Winner: 1) '''
   ];
 
    List<String> sections = [];
@@ -691,7 +708,18 @@ if (section.contains('del')) {
   }
   
 
-
+DateTime? convertToSelectedDate(String input) {
+        int startIndex =input.lastIndexOf('"');
+        int endIndex = input.lastIndexOf('"', startIndex - 1);
+    
+        if (startIndex != -1 && endIndex != -1 && startIndex != endIndex) {
+        String formattedString = input.substring(endIndex + 1, startIndex).replaceAll('_', '-');
+        String dateTimeWithoutOffset = formattedString.substring(0, formattedString.indexOf('+'));
+        DateTime date = DateTime.parse(dateTimeWithoutOffset);
+        return date;
+                }
+        return null;
+  }
 
    
 
@@ -714,6 +742,10 @@ Widget checkConsistency(String contractId) {
     "contractMediumShape",
     "contractCategoryShape",
     "contractContractorShape",
+    "removeContractCategory",
+    "removeContractStatusShape",
+    "effectiveDateShape",
+    "endDateShape",
   ];
 
   Map<String, List<String>> criteriaSets = {};
@@ -749,138 +781,202 @@ Widget checkConsistency(String contractId) {
 
   return ElevatedButton(
     onPressed: () {
-      showModalBottomSheet(
-        context: context,
-        builder: (BuildContext context) {
-          return SingleChildScrollView(
-            child: StatefulBuilder(
-              builder: (BuildContext context, StateSetter setState) {
-                return Container(
-                  padding: EdgeInsets.all(16.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Text(
-                        'There are inconsistencies in your contract data. Please select the way you want to repair these inconsistencies.',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18.0,
+      if (answerSets.isEmpty) {
+        // Show modal indicating no inconsistencies found
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('No Inconsistencies Found'),
+              content: Text('There are no inconsistencies in your contract data.'),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('OK'),
+                ),
+              ],
+            );
+          },
+        );
+      } else {
+        showModalBottomSheet(
+          context: context,
+          builder: (BuildContext context) {
+            return SingleChildScrollView(
+              child: StatefulBuilder(
+                builder: (BuildContext context, StateSetter setState) {
+                  return Container(
+                    padding: EdgeInsets.all(16.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text(
+                          'There are inconsistencies in your contract data. Please select the way you want to repair these inconsistencies.',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0,
+                          ),
                         ),
-                      ),
-                      for (int i = 0; i < answerSets.length; i++)
-                        if (answerSets[i].isNotEmpty)
-                          ...[
-                            SizedBox(height: 20),
-                            Text(
-                              'Set ${i + 1}:',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16.0,
-                              ),
-                            ),
-                            for (int j = 0; j < answerSets[i].length; j++)
-                              ListTile(
-                                title: Text(answerSets[i][j]),
-                                leading: Radio(
-                                  value: j,
-                                  groupValue: selectedAnswers[i],
-                                  onChanged: (value) {
-                                    setState(() {
-                                      selectedAnswers[i] = value as int?;
-                                    });
-                                  },
+                        for (int i = 0; i < answerSets.length; i++)
+                          if (answerSets[i].isNotEmpty)
+                            ...[
+                              SizedBox(height: 20),
+                              Text(
+                                'Set ${i + 1}:',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16.0,
                                 ),
                               ),
-                          ],
-                      SizedBox(height: 20),
-                      ElevatedButton(
-                        onPressed: () async {
-                          bool allSetsSelected = true;
-                          for (int i = 0; i < answerSets.length; i++) {
-                            if (answerSets[i].isNotEmpty && selectedAnswers[i] == null) {
-                              allSetsSelected = false;
-                              break;
-                            }
-                          }
-                          if (allSetsSelected) {
-                            // Perform repair action here with selected answers
-                            final contract = await dataProvider.fetchContractById(contractId);
+                              for (int j = 0; j < answerSets[i].length; j++)
+                                ListTile(
+                                  title: Text(answerSets[i][j]),
+                                  leading: Radio(
+                                    value: j,
+                                    groupValue: selectedAnswers[i],
+                                    onChanged: (value) {
+                                      setState(() {
+                                        selectedAnswers[i] = value as int?;
+                                      });
+                                    },
+                                  ),
+                                ),
+                            ],
+                        SizedBox(height: 20),
+                        ElevatedButton(
+                          onPressed: () async {
+                            bool allSetsSelected = true;
                             for (int i = 0; i < answerSets.length; i++) {
-                              if (answerSets[i].isNotEmpty) {
-                                int selectedAnswerIndex = selectedAnswers[i]!;
-
-                                String answer = answerSets[i][selectedAnswerIndex];
-                                // Status is unknown but it should be Fulfilled, Pending or Violated use case
-                                if (answer.contains("ContractStatusShape")) {
-                                  if (answer.contains("statusFulfilled")) {
-                                    contract.status = "statusFulfilled";
-                                  } else if (answer.contains("statusPending")) {
-                                    contract.status = "statusPending";
-                                  } else if (answer.contains("statusViolated")) {
-                                    contract.status = "statusViolated";
-                                  }
-                                }
-
-                                // Contract category should either be BusinessToBusiness or BusinessToConsumer
-                                if (answer.contains("contractCategoryShape")) {
-                                  if (answer.contains("BusinessToBusiness")) {
-                                    contract.category = "BusinessToBusiness";
-                                  } else if (answer.contains("BusinessToConsumer")) {
-                                    contract.category = "BusinessToConsumer";
-                                  }
-                                }
-
-                                if (answer.contains("contractMediumShape")) {
-                                  if (answer.contains("written")) {
-                                    contract.medium = "Written";
-                                  } else if (answer.contains("transferable")) {
-                                    contract.medium = "Transferable";
-                                  } else if (answer.contains("verbal")) {
-                                    contract.medium = "Verbal";
-                                  } else if (answer.contains("mutual")) {
-                                    contract.medium = "Mutual";
-                                  }
-                                }
+                              if (answerSets[i].isNotEmpty && selectedAnswers[i] == null) {
+                                allSetsSelected = false;
+                                break;
                               }
                             }
-                            Navigator.pop(context);
-                            dataProvider.updateContract(contract);
-                          } else {
-                            showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return AlertDialog(
-                                  title: Text('Selection of the inconsistencies is incomplete.'),
-                                  content: Text('Please select an option from each set.'),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Text('OK'),
-                                    ),
-                                  ],
-                                );
-                              },
-                            );
-                          }
-                        },
-                        child: Text('Repair'),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          );
-        },
-      );
+                            if (allSetsSelected) {
+                              // Perform repair action here with selected answers
+                              final contract = await dataProvider.fetchContractById(contractId);
+                              for (int i = 0; i < answerSets.length; i++) {
+                                if (answerSets[i].isNotEmpty) {
+                                  int selectedAnswerIndex = selectedAnswers[i]!;
+
+                                  String answer = answerSets[i][selectedAnswerIndex];
+                                  // Status is unknown but it should be Fulfilled, Pending or Violated use case
+                                  if (answer.contains("contractStatusShape")) {
+                                    if (answer.contains("statusFulfilled")) {
+                                      contract.category = "categoryBusinessToConsumer";
+                                      log("This is the contract type" + contract.type!);
+                                    } else if (answer.contains("statusPending")) {
+                                      contract.status = "statusPending";
+                                    } else if (answer.contains("statusViolated")) {
+                                      contract.status = "statusViolated";
+                                    }
+                                  }
+
+                                  // Contract category should either be BusinessToBusiness or BusinessToConsumer
+                                  if (answer.contains("contractCategoryShape")) {
+                                    if (answer.contains("BusinessToBusiness")) {
+                                      contract.category = "BusinessToBusiness";
+                                    } else if (answer.contains("BusinessToConsumer")) {
+                                      contract.category = "BusinessToConsumer";
+                                    }
+                                  }
+                                 //Contract medium should be Written, Transferable, Verbal or Mutual 
+                                  if (answer.contains("contractMediumShape")) {
+                                    if (answer.contains("writtttenn")) {
+                                      contract.medium = "Written";
+                                    } else if (answer.contains("transferable")) {
+                                      contract.medium = "Transferable";
+                                    } else if (answer.contains("verbal")) {
+                                      contract.medium = "Verbal";
+                                    } else if (answer.contains("mutual")) {
+                                      contract.medium = "Mutual";
+                                    }
+                                  }
+
+                                  //If there are duplicates on the Contract Category the contract should have only one contract category
+                                  if(answer.contains("removeContractCategory")){
+                                    if(answer.contains("categoryBusinessToBusiness")){
+                                      contract.contractors = ["c_370c40d4-4e1a-11ed-9fb9-0242ac150003","c_af45d8e2-5371-11ed-9a79-0242ac150003"];
+                                    }
+                                    else if(answer.contains("categoryBusinessToConsumer")){
+                                          log("categoryBusinessToConsumer");
+                                    }
+                                  }
+                                   
+                                  //If there is more than one value on the Contract Status
+                                  if(answer.contains("removeContractStatusShape")){
+                                    if(answer.contains("statusPending") && answer.contains("statusFulfilled")){
+                                      contract.status = "stateViolated";
+                                    }
+
+                                    else if(answer.contains("statusPending") && answer.contains("statusViolated")){
+                                      contract.status = "hasCreated";
+                                    }
+
+                                    else if(answer.contains("statusFulfilled") && answer.contains("statusViolated")){
+                                      contract.status = "statePending";
+                                    }
+                                  }
+
+
+                           
+                                 
+                                  if(answer.contains("effectiveDateShape")){
+                                  
+                                  log(convertToSelectedDate(answer)!.toIso8601String());
+                                    //if dates[i] != convertToSelectedDate(answer)!.toIso8601String(){
+                                    // contract.effectiveDate = date[i];}
+                                  }
+
+                                  if(answer.contains("endDateShape")){
+
+                                    log(convertToSelectedDate(answer)!.toIso8601String());
+                                    
+                                  }
+
+
+                                }
+                              }
+                              Navigator.pop(context);
+                              dataProvider.updateContract(contract);
+                            } else {
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    title: Text('Selection of the inconsistencies is incomplete.'),
+                                    content: Text('Please select an option from each set.'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Text('OK'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            }
+                          },
+                          child: Text('Repair'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            );
+          },
+        );
+      }
     },
     child: Text('Check'),
   );
 }
-
 
 
 
