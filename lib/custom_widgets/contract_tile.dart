@@ -821,30 +821,29 @@ Widget checkConsistency(String contractId) {
                           ),
                         ),
                         for (int i = 0; i < answerSets.length; i++)
-                          if (answerSets[i].isNotEmpty)
-                            ...[
-                              SizedBox(height: 20),
-                              Text(
-                                'Set ${i + 1}:',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.0,
-                                ),
-                              ),
-                              for (int j = 0; j < answerSets[i].length; j++)
-                                ListTile(
-                                  title: Text(answerSets[i][j]),
-                                  leading: Radio(
-                                    value: j,
-                                    groupValue: selectedAnswers[i],
-                                    onChanged: (value) {
-                                      setState(() {
-                                        selectedAnswers[i] = value as int?;
-                                      });
-                                    },
-                                  ),
-                                ),
-                            ],
+  if (answerSets[i].isNotEmpty) ...[
+    SizedBox(height: 20),
+    Text(
+      '${getSetName(criteriaStrings[i])}: ', // Get set name based on criteria
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 16.0,
+      ),
+    ),
+    for (int j = 0; j < answerSets[i].length; j++)
+      ListTile(
+        title: Text(answerSets[i][j]),
+        leading: Radio(
+          value: j,
+          groupValue: selectedAnswers[i],
+          onChanged: (value) {
+            setState(() {
+              selectedAnswers[i] = value as int?;
+            });
+          },
+        ),
+      ),
+  ],
                         SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: () async {
@@ -978,6 +977,28 @@ Widget checkConsistency(String contractId) {
   );
 }
 
+String getSetName(String criteria) {
+  switch (criteria) {
+    case "contractStatusShape":
+      return "Inconsistencies related to the contract status";
+    case "contractMediumShape":
+      return "Inconsistencies related to the contract medium";
+    case "contractCategoryShape":
+      return "Inconsistencies related to the contract category";
+    case "contractContractorShape":
+      return "Inconsistencies related to the contract contractor";
+    case "removeContractCategory":
+      return "Inconsistencies related to removing contract category";
+    case "removeContractStatusShape":
+      return "Inconsistencies related to removing contract status";
+    case "effectiveDateShape":
+      return "Inconsistencies related to effective date";
+    case "endDateShape":
+      return "Inconsistencies related to end date";
+    default:
+      return "Default Inconsistencies";
+  }
+}
 
 
 
