@@ -4,6 +4,7 @@ import 'package:smashhit_ui/data/data_provider.dart';
 import 'dart:io';
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'dart:convert';
 
 
 class ContractTile extends StatefulWidget {
@@ -109,6 +110,7 @@ class _ContractTileState extends State<ContractTile> {
                 
                 ],
               ),
+              
             ),
           ],
         ),
@@ -292,7 +294,22 @@ class _ContractTileState extends State<ContractTile> {
       },
     );
   }
+  
 
+  Future<void> runShScriptInWSL() async {
+     log('Output from script');
+  var process = await Process.start(
+    'wsl',
+    ['bash', '/home/genibushati/shacl-repairs-ccv-repair-strategies/run-example.sh'],
+    // Specify the working directory if needed
+    // workingDirectory: '/mnt/c/path/to/your/directory',
+  );
+
+  var output = await process.stdout.transform(utf8.decoder).join();
+  log('Output from script: $output');
+
+  // Process the output here
+}
     List<String> parseTextIntoAnswers() {
    
     
@@ -644,7 +661,23 @@ Optimization : 0 1
 Calls        : 1
 Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.005s
-Threads      : 3        (Winner: 1) '''
+Threads      : 3        (Winner: 1) ''',
+
+'''Solving...
+Answer: 1
+actualTarget("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002",_contractStatusShape) actualTarget("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002",_contractViolationShape) del(_hasContractStatus("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002","_statusFulfilled")) add(_hasContractStatus("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002","_statusViolated"))
+
+OPTIMUM FOUND
+
+Models       : 10
+  Optimum    : yes
+  Optimal    : 8
+Optimization : 0 2 1
+Calls        : 1
+Time         : 0.031s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.031s
+Threads      : 3        (Winner: 2)
+ '''
   ];
 
    List<String> sections = [];
@@ -670,7 +703,19 @@ Threads      : 3        (Winner: 1) '''
      int startIndexTarget = section.indexOf('actualTarget');
    int endIndexTargetAdd = section.indexOf('add', startIndexTarget);
    int endIndexTargetDel = section.indexOf('del', startIndexTarget);
-
+   while(section.contains("del(")){
+   int startIndexDel = section.indexOf("del(");
+   int endIndexCommaDel = section.indexOf('","');
+   if(startIndexDel!=-1 && endIndexCommaDel!=-1){
+   section = section.replaceRange(startIndexDel, endIndexCommaDel +2, "del (");
+   }}
+   while(section.contains("add(")){
+   int startIndexAdd = section.indexOf("add(");
+   int endIndexCommaAdd = section.indexOf('","');
+   if(startIndexAdd!=-1 && endIndexCommaAdd!=-1){
+   section = section.replaceRange(startIndexAdd, endIndexCommaAdd +2, "add (");
+   }
+   }
 //    if ((startIndexTarget != -1 && endIndexTargetAdd != -1) && (startIndexTarget != -1 && endIndexTargetDel != -1) && (endIndexTargetAdd>endIndexTargetDel)) {
 // //if del string is found before add string    
 //      section = section.replaceRange(startIndexTarget, endIndexTargetDel, '');
@@ -689,12 +734,27 @@ Threads      : 3        (Winner: 1) '''
 //    }
   
        if (section.contains('add')) {
-    section =  section.replaceAll('add', 'Add ');
+    section =  section.replaceAll('add', '   Add ');
   };
 if (section.contains('del')) {
-    section =  section.replaceAll('del', 'Delete ');
+    section =  section.replaceAll('del', '   Delete ');
   };
 
+  if (section.contains('))')) {
+    section =  section.replaceAll('))', ')');
+  };
+  
+   if (section.contains('"_')) {
+    section =  section.replaceAll('"_', '"');
+  };
+
+   if (section.contains(',_')) {
+    section =  section.replaceAll(',_', ',');
+  };
+
+   if (section.contains('actualTarget')) {
+    section =  section.replaceAll('actualTarget', 'Targeting contract with the correspondent ID: ');
+  };
 
   // section = section.replaceAll('base_', '');
       
@@ -721,9 +781,7 @@ DateTime? convertToSelectedDate(String input) {
         return null;
   }
 
-   
-
-   
+ 
    
   
 
@@ -746,6 +804,7 @@ Widget checkConsistency(String contractId) {
     "removeContractStatusShape",
     "effectiveDateShape",
     "endDateShape",
+    "contractViolationShape",
   ];
 
   Map<String, List<String>> criteriaSets = {};
@@ -919,7 +978,9 @@ Widget checkConsistency(String contractId) {
                                       contract.status = "statePending";
                                     }
                                   }
-
+                                  if(answer.contains("contractViolationShape")){
+                                    contract.status = "stateViolated";
+                                  }
 
                            
                                  
