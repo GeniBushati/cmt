@@ -253,7 +253,15 @@ class _ContractTileState extends State<ContractTile> {
       return Tooltip(
           message: "The contract is still awaiting signatures.",
           child: Icon(Icons.pending, color: Colors.grey, size: 30));
-    } else if (status.contains("Signed") || status.contains("signed")) {
+    } 
+
+    else if (status.contains("Fulfilled") || status.contains("fulfilled")) {
+      return Tooltip(
+          message: "The contract status is fulfilled.",
+          child: Icon(Icons.check_circle, color: Color.fromARGB(255, 32, 160, 21), size: 30));
+    } 
+    
+    else if (status.contains("Signed") || status.contains("signed")) {
       return Tooltip(
           message: "The contract has been signed by all parties.",
           child: Icon(Icons.thumb_up, color: Colors.blue, size: 30));
@@ -358,10 +366,10 @@ class _ContractTileState extends State<ContractTile> {
 
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_4a2e66a2-de1e-11ee-8bff-0242ac1c0002",_contractStatusShape) del(_hasContractCategory("_contb2c_4a2e66a2-de1e-11ee-8bff-0242ac1c0002","_categoryBusinessToBusiness"))
+actualTarget("_contb2c_4a2e66a2-de1e-11ee-8bff-0242ac1c0002",_removeCategoryShape) del(_hasContractCategory("_contb2c_4a2e66a2-de1e-11ee-8bff-0242ac1c0002","_categoryBusinessToBusiness"))
 Optimization: 0 1
 Answer: 2
-actualTarget("_contb2c_4a2e66a2-de1e-11ee-8bff-0242ac1c0002",_contractStatusShape) del(_hasContractCategory("_contb2c_4a2e66a2-de1e-11ee-8bff-0242ac1c0002","_categoryBusinessToConsumer"))
+actualTarget("_contb2c_4a2e66a2-de1e-11ee-8bff-0242ac1c0002",_removeCategoryShape) del(_hasContractCategory("_contb2c_4a2e66a2-de1e-11ee-8bff-0242ac1c0002","_categoryBusinessToConsumer"))
 Optimization: 0 1
 OPTIMUM FOUND
 
@@ -393,28 +401,28 @@ CPU Time     : 0.005s''',
 
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumers")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumer"))
+actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryUnknown")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumer"))
 Optimization: 0 2 1
 Answer: 2
-actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumers")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumer"))
+actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryUnknown")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumer"))
 Optimization: 0 2 1
 Answer: 3
-actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumers")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumer"))
+actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryUnknown")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumer"))
 Optimization: 0 2 1
 Answer: 4
-actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumers")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumer"))
+actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryUnknown")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumer"))
 Optimization: 0 2 1
 Answer: 5
-actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumers")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToBusiness"))
+actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryUnknown")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToBusiness"))
 Optimization: 0 2 1
 Answer: 6
-actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumers")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToBusiness"))
+actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryUnknown")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToBusiness"))
 Optimization: 0 2 1
 Answer: 7
-actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumers")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToBusiness"))
+actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryUnknown")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToBusiness"))
 Optimization: 0 2 1
 Answer: 8
-actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToConsumers")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToBusiness"))
+actualTarget("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002",_contractCategoryShape) del(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryUnknown")) add(_hasContractCategory("_contb2c_90e29d48-e6de-11ee-a88e-0242ac1c0002","_categoryBusinessToBusiness"))
 Optimization: 0 2 1
 OPTIMUM FOUND
 
@@ -429,10 +437,10 @@ Threads      : 3        (Winner: 0)''',
 
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002",_endDateShape) del(_hasEndDate("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002","2024_07_07 10:38:07.617000+00:00"))
+actualTarget("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002",_removeEndDateShape) del(_hasEndDate("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002","2024_07_07 10:38:07.617000+00:00"))
 Optimization: 0 1
 Answer: 2
-actualTarget("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002",_endDateShape) del(_hasEndDate("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002","2023_07_07 10:38:07.617000+00:00"))
+actualTarget("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002",_removeEndDateShape) del(_hasEndDate("_contb2c_7794b096-e6df-11ee-97db-0242ac1c0002","2023_07_07 10:38:07.617000+00:00"))
 Optimization: 0 1
 OPTIMUM FOUND
 
@@ -447,40 +455,40 @@ Threads      : 3        (Winner: 1)''',
 
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
 Optimization: 0 2 0
 Answer: 2
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
 Optimization: 0 2 0
 Answer: 3
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 4
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
 Optimization: 0 2 0
 Answer: 5
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled"))
 Optimization: 0 2 0
 Answer: 6
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 7
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 8
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 9
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 10
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 11
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 Answer: 12
-actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeContractStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002",_removeStatusShape) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusPending")) del(_hasContractStatus("_contb2c_536117d4-e2b4-11ee-bdde-0242ac1c0002","_statusViolated"))
 Optimization: 0 2 0
 OPTIMUM FOUND
 
@@ -541,10 +549,10 @@ CPU Time     : 0.011s
 Threads      : 3        (Winner: 2)''',
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002",_effectiveDateShape) del(fibo_fnd_agr_ctr_hasEffectiveDate("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002","2022_09_07 10:38:07.617000+00:00"))
+actualTarget("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002",_removeEffectiveDateShape) del(fibo_fnd_agr_ctr_hasEffectiveDate("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002","2022_09_07 10:38:07.617000+00:00"))
 Optimization: 0 1
 Answer: 2
-actualTarget("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002",_effectiveDateShape) del(fibo_fnd_agr_ctr_hasEffectiveDate("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002","2023_09_07 10:38:07.617000+00:00"))
+actualTarget("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002",_removeEffectiveDateShape) del(fibo_fnd_agr_ctr_hasEffectiveDate("_contb2c_867a7260-f4d8-11ee-a348-0242ac1c0002","2023_09_07 10:38:07.617000+00:00"))
 Optimization: 0 1
 OPTIMUM FOUND
 
@@ -647,10 +655,10 @@ Threads      : 3        (Winner: 1)''',
 // Threads      : 3        (Winner: 2)''',
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002",_removeContractCategory) del(_hasContractCategory("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002","_categoryBusinessToBusiness"))
+actualTarget("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002",_removeCategoryShape) del(_hasContractCategory("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002","_categoryBusinessToBusiness"))
 Optimization: 0 1
 Answer: 2
-actualTarget("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002",_removeContractCategory) del(_hasContractCategory("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002","_categoryBusinessToConsumer"))
+actualTarget("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002",_removeCategoryShape) del(_hasContractCategory("_contb2c_77d8a6f8-f331-11ee-8f65-0242ac1c0002","_categoryBusinessToConsumer"))
 Optimization: 0 1
 OPTIMUM FOUND
 
@@ -665,7 +673,7 @@ Threads      : 3        (Winner: 1) ''',
 
 '''Solving...
 Answer: 1
-actualTarget("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002",_contractStatusShape) actualTarget("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002",_contractViolationShape) del(_hasContractStatus("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002","_statusFulfilled")) add(_hasContractStatus("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002","_statusViolated"))
+actualTarget("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002","_statusFulfilled")) add(_hasContractStatus("_contb2c_e0cb5066-e6de-11ee-b8a8-0242ac1c0002","_statusViolated"))
 
 OPTIMUM FOUND
 
@@ -677,7 +685,42 @@ Calls        : 1
 Time         : 0.031s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.031s
 Threads      : 3        (Winner: 2)
- '''
+ ''',
+ '''Solving...
+Answer: 1
+actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusPending")) add(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusViolated"))
+Optimization: 0 3 1
+Answer: 2
+actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusPending")) add(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusViolated"))
+Optimization: 0 3 1
+Answer: 3
+actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusPending")) add(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusViolated"))
+Optimization: 0 3 1
+Answer: 4
+actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusPending")) add(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusViolated"))
+Optimization: 0 3 1
+Answer: 5
+actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusPending")) add(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusViolated"))
+Optimization: 0 3 1
+Answer: 6
+actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusPending")) add(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusViolated"))
+Optimization: 0 3 1
+Answer: 7
+actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusPending")) add(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusViolated"))
+Optimization: 0 3 1
+Answer: 8
+actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) actualTarget("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002",_obligationViolationShape) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusFulfilled")) del(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusPending")) add(_hasContractStatus("_contb2b_57fde93a-f195-11ee-a1d7-0242ac1c0002","_statusViolated"))
+Optimization: 0 3 1
+OPTIMUM FOUND
+
+Models       : 10
+  Optimum    : yes
+  Optimal    : 8
+Optimization : 0 3 1
+Calls        : 1
+Time         : 0.056s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.060s
+Threads      : 3        (Winner: 0)'''
   ];
 
    List<String> sections = [];
@@ -753,7 +796,7 @@ if (section.contains('del')) {
   };
 
    if (section.contains('actualTarget')) {
-    section =  section.replaceAll('actualTarget', 'Targeting contract with the correspondent ID: ');
+    section =  section.replaceAll('actualTarget', 'Targeting contract with the corresponding ID: ');
   };
 
   // section = section.replaceAll('base_', '');
@@ -800,11 +843,11 @@ Widget checkConsistency(String contractId) {
     "contractMediumShape",
     "contractCategoryShape",
     "contractContractorShape",
-    "removeContractCategory",
-    "removeContractStatusShape",
-    "effectiveDateShape",
-    "endDateShape",
-    "contractViolationShape",
+    "removeCategoryShape",
+    "removeStatusShape",
+    "removeEffectiveDateShape",
+    "removeEndDateShape",
+    "obligationViolationShape",
   ];
 
   Map<String, List<String>> criteriaSets = {};
@@ -879,30 +922,31 @@ Widget checkConsistency(String contractId) {
                             fontSize: 18.0,
                           ),
                         ),
-                        for (int i = 0; i < answerSets.length; i++)
-  if (answerSets[i].isNotEmpty) ...[
-    SizedBox(height: 20),
-    Text(
-      '${getSetName(criteriaStrings[i])}: ', // Get set name based on criteria
-      style: TextStyle(
-        fontWeight: FontWeight.bold,
-        fontSize: 16.0,
-      ),
-    ),
-    for (int j = 0; j < answerSets[i].length; j++)
-      ListTile(
-        title: Text(answerSets[i][j]),
-        leading: Radio(
-          value: j,
-          groupValue: selectedAnswers[i],
-          onChanged: (value) {
-            setState(() {
-              selectedAnswers[i] = value as int?;
-            });
-          },
-        ),
-      ),
-  ],
+  for (int i = 0; i < answerSets.length; i++)
+                          if (answerSets[i].isNotEmpty) ...[
+                            SizedBox(height: 20),
+                            // Incorporating the modification here
+                            Text(
+                              '${getSetName(criteriaSets.keys.toList()[i])}: ',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.0,
+                              ),
+                            ),
+                            for (int j = 0; j < answerSets[i].length; j++)
+                              ListTile(
+                                title: Text(answerSets[i][j]),
+                                leading: Radio(
+                                  value: j,
+                                  groupValue: selectedAnswers[i],
+                                  onChanged: (value) {
+                                    setState(() {
+                                      selectedAnswers[i] = value as int?;
+                                    });
+                                  },
+                                ),
+                              ),
+                          ],
                         SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: () async {
@@ -919,12 +963,15 @@ Widget checkConsistency(String contractId) {
                               for (int i = 0; i < answerSets.length; i++) {
                                 if (answerSets[i].isNotEmpty) {
                                   int selectedAnswerIndex = selectedAnswers[i]!;
+                                  int nonSelectedAnswerIndex = (selectedAnswerIndex + 1) % 2;
+                                  String nonSelectedAnswer = answerSets[i][nonSelectedAnswerIndex];
+
 
                                   String answer = answerSets[i][selectedAnswerIndex];
                                   // Status is unknown but it should be Fulfilled, Pending or Violated use case
                                   if (answer.contains("contractStatusShape")) {
                                     if (answer.contains("statusFulfilled")) {
-                                      contract.category = "categoryBusinessToConsumer";
+                                      contract.status = "stateFulfilled";
                                       log("This is the contract type" + contract.type!);
                                     } else if (answer.contains("statusPending")) {
                                       contract.status = "statusPending";
@@ -935,10 +982,10 @@ Widget checkConsistency(String contractId) {
 
                                   // Contract category should either be BusinessToBusiness or BusinessToConsumer
                                   if (answer.contains("contractCategoryShape")) {
-                                    if (answer.contains("BusinessToBusiness")) {
-                                      contract.category = "BusinessToBusiness";
+                                    if (answer.contains("categoryBusinessToBusiness")) {
+                                      contract.category = "categoryBusinessToBusiness";
                                     } else if (answer.contains("BusinessToConsumer")) {
-                                      contract.category = "BusinessToConsumer";
+                                      contract.category = "categoryBusinessToConsumer";
                                     }
                                   }
                                  //Contract medium should be Written, Transferable, Verbal or Mutual 
@@ -955,45 +1002,46 @@ Widget checkConsistency(String contractId) {
                                   }
 
                                   //If there are duplicates on the Contract Category the contract should have only one contract category
-                                  if(answer.contains("removeContractCategory")){
+                                  if(answer.contains("removeCategoryShape")){
                                     if(answer.contains("categoryBusinessToBusiness")){
-                                      contract.contractors = ["c_370c40d4-4e1a-11ed-9fb9-0242ac150003","c_af45d8e2-5371-11ed-9a79-0242ac150003"];
+                                      contract.category = "categoryBusinessToConsumer";
                                     }
                                     else if(answer.contains("categoryBusinessToConsumer")){
-                                          log("categoryBusinessToConsumer");
+                                          contract.category = "categoryBusinessToBusiness";
                                     }
                                   }
                                    
                                   //If there is more than one value on the Contract Status
-                                  if(answer.contains("removeContractStatusShape")){
+                                  if(answer.contains("removeStatusShape")){
                                     if(answer.contains("statusPending") && answer.contains("statusFulfilled")){
                                       contract.status = "stateViolated";
                                     }
 
                                     else if(answer.contains("statusPending") && answer.contains("statusViolated")){
-                                      contract.status = "hasCreated";
+                                      contract.status = "statusFulfilled";
                                     }
 
                                     else if(answer.contains("statusFulfilled") && answer.contains("statusViolated")){
                                       contract.status = "statePending";
                                     }
                                   }
-                                  if(answer.contains("contractViolationShape")){
+                                  if(answer.contains("obligationViolationShape")){
                                     contract.status = "stateViolated";
                                   }
 
                            
                                  
-                                  if(answer.contains("effectiveDateShape")){
+                                  if(answer.contains("removeEffectiveDateShape")){
                                   
-                                  log(convertToSelectedDate(answer)!.toIso8601String());
+                                  //log(convertToSelectedDate(answer)!.toIso8601String());
                                     //if dates[i] != convertToSelectedDate(answer)!.toIso8601String(){
                                     // contract.effectiveDate = date[i];}
+                                    contract.effectiveDate = convertToSelectedDate(nonSelectedAnswer)!;
                                   }
 
-                                  if(answer.contains("endDateShape")){
+                                  if(answer.contains("removeEndDateShape")){
 
-                                    log(convertToSelectedDate(answer)!.toIso8601String());
+                                    contract.endDate = convertToSelectedDate(nonSelectedAnswer)!;
                                     
                                   }
 
@@ -1041,21 +1089,23 @@ Widget checkConsistency(String contractId) {
 String getSetName(String criteria) {
   switch (criteria) {
     case "contractStatusShape":
-      return "Inconsistencies related to the contract status";
+      return "The inconsistency is related to the fact that the existing contract status is not recognized. Please select a valid contract status";
     case "contractMediumShape":
-      return "Inconsistencies related to the contract medium";
+      return "This inconsistency is related to the fact that the contract medium is not recognized. Please select a valid contract medium";
     case "contractCategoryShape":
-      return "Inconsistencies related to the contract category";
+      return "This inconsistency is related to the fact that the contract category is not recognized. Please select a valid contract category";
     case "contractContractorShape":
       return "Inconsistencies related to the contract contractor";
-    case "removeContractCategory":
-      return "Inconsistencies related to removing contract category";
-    case "removeContractStatusShape":
-      return "Inconsistencies related to removing contract status";
-    case "effectiveDateShape":
-      return "Inconsistencies related to effective date";
-    case "endDateShape":
-      return "Inconsistencies related to end date";
+    case "removeCategoryShape":
+      return "This inconsistency is related to the fact that there are multiple different contract categories for the same contract. Please select one contract category";
+    case "removeStatusShape":
+      return "This inconsistency is related to the fact that there are multiple different contract statuses for the same contract. Please select one contract status";
+    case "removeEffectiveDateShape":
+      return "This inconsistency is related to the fact that there are multiple dates for the effective date of the contract. Please select one date";
+    case "removeEndDateShape":
+      return "This inconsistency is related to the fact that there are multiple dates for the end date of the contract. Please select one date";
+    case "obligationViolationShape":
+      return "This inconsistency is related to the fact that there is a violated obligation in the contract. In this case, the contract status should also be 'violated'. Please select the option";
     default:
       return "Default Inconsistencies";
   }

@@ -1055,6 +1055,10 @@ class _ContractCreationState extends State<ViewContract> {
       return Tooltip(
           message: "The contract is still awaiting signatures.",
           child: Icon(Icons.pending, color: Colors.grey, size: 50));
+    } else if (status.contains("Fulfilled") || status.contains("fulfilled")) {
+      return Tooltip(
+          message: "The contract status is fulfilled.",
+          child: Icon(Icons.check_circle, color: Color.fromARGB(255, 32, 160, 21), size: 30));
     } else if (status.contains("Signed") || status.contains("signed")) {
       return Tooltip(
           message: "The contract has been signed by all parties.",
