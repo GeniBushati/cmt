@@ -720,6 +720,23 @@ Optimization : 0 3 1
 Calls        : 1
 Time         : 0.056s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.060s
+Threads      : 3        (Winner: 0)''',
+''' Solving...
+Answer: 1
+actualTarget("_contb2b_1fd284b8-f194-11ee-a5fe-0242ac1c0002",_removeExecutionDateShape) del(fibo_fnd_agr_ctr_hasExecutionDate("_contb2b_1fd284b8-f194-11ee-a5fe-0242ac1c0002","2024_09_07 10:38:07.617000+00:00"))
+Optimization: 0 1
+Answer: 2
+actualTarget("_contb2b_1fd284b8-f194-11ee-a5fe-0242ac1c0002",_removeExecutionDateShape) del(fibo_fnd_agr_ctr_hasExecutionDate("_contb2b_1fd284b8-f194-11ee-a5fe-0242ac1c0002","2022_09_07 10:38:07.617000+00:00"))
+Optimization: 0 1
+OPTIMUM FOUND
+
+Models       : 3
+  Optimum    : yes
+  Optimal    : 2
+Optimization : 0 1
+Calls        : 1
+Time         : 0.020s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.008s
 Threads      : 3        (Winner: 0)'''
   ];
 
@@ -847,6 +864,7 @@ Widget checkConsistency(String contractId) {
     "removeStatusShape",
     "removeEffectiveDateShape",
     "removeEndDateShape",
+    "removeExecutionDateShape",
     "obligationViolationShape",
   ];
 
@@ -982,11 +1000,11 @@ Widget checkConsistency(String contractId) {
                                   // log("This is the answerSet ${answerSets[0][0]}");
                                   // Status is unknown but it should be Fulfilled, Pending or Violated use case
                                   if(answer.contains("obligationViolationShape")){
-                                     contract.status = "stateViolated";
+                                     contract.status = "statusViolated";
                                   }
                                   if (answer.contains("contractStatusShape")) {
                                     if (answer.contains("statusFulfilled")) {
-                                      contract.status = "stateFulfilled";
+                                      contract.status = "statusFulfilled";
                                       log("This is the contract type" + contract.type!);
                                     } else if (answer.contains("statusPending")) {
                                       contract.status = "statusPending";
@@ -1005,7 +1023,7 @@ Widget checkConsistency(String contractId) {
                                   }
                                  //Contract medium should be Written, Transferable, Verbal or Mutual 
                                   if (answer.contains("contractMediumShape")) {
-                                    if (answer.contains("writtttenn")) {
+                                    if (answer.contains("written")) {
                                       contract.medium = "Written";
                                     } else if (answer.contains("transferable")) {
                                       contract.medium = "Transferable";
@@ -1057,6 +1075,13 @@ Widget checkConsistency(String contractId) {
                                    int nonSelectedAnswerIndex = (selectedAnswerIndex + 1) % 2;
                                   String nonSelectedAnswer = answerSets[i][nonSelectedAnswerIndex];
                                     contract.endDate = convertToSelectedDate(nonSelectedAnswer)!;
+                                    
+                                  }
+
+                                  if(answer.contains("removeExecutionDateShape")){
+                                   int nonSelectedAnswerIndex = (selectedAnswerIndex + 1) % 2;
+                                  String nonSelectedAnswer = answerSets[i][nonSelectedAnswerIndex];
+                                    contract.executionDate = convertToSelectedDate(nonSelectedAnswer)!;
                                     
                                   }
             
@@ -1122,6 +1147,8 @@ String getSetName(String criteria) {
       return "This inconsistency is related to the fact that there are multiple dates for the effective date of the contract. Please select one date";
     case "removeEndDateShape":
       return "This inconsistency is related to the fact that there are multiple dates for the end date of the contract. Please select one date";
+    case "removeExecutionDateShape":
+      return "This inconsistency is related to the fact that there are multiple dates for the execution date of the contract. Please select one date";  
     case "obligationViolationShape":
       return "This inconsistency is related to the fact that there is a violated obligation in the contract. In this case, the contract status should also be 'violated'. Please select the option";
     default:
